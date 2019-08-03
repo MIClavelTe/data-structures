@@ -40,6 +40,26 @@ class LinkedList:
                 current = current.next_node
         return None
 
+    def insert (self, data, index):
+        if index == 0:
+            self.add(data)
+        
+        if index > 0:
+            new = Node(data)
+
+            position = index
+            current = self.head
+
+            while current < 1:
+                current = node.next_node
+                position -= 1
+
+            prev_node = current
+            next_node = current.next_node
+
+            prev_node.next_node = new
+            new.next_node = next_node
+
     def __repr__(self):
         nodes = []
         current = self.head
