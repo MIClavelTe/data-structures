@@ -10,7 +10,7 @@ def merge_sort (list):
 
 def split (list):
     mid = len(list)//2
-    lef = list[:mid]
+    left = list[:mid]
     right = list[mid:]
 
     return left,right
@@ -35,3 +35,5 @@ def merge (left, right):
     while j < len(right):
         l.append(right[j])
         j += 1
+
+    return l
