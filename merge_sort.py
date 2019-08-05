@@ -37,3 +37,16 @@ def merge (left, right):
         j += 1
 
     return l
+
+def verify_sorted (list):
+    n = len(list)
+
+    if n == 0 or n == 1:
+        return True
+
+    return list[0] < list[1] and verify_sorted(list[1:])
+
+alist = [12, 36, 9, 3, 24, 17]
+l = merge_sort(alist)
+print(verify_sorted(alist))
+print(verify_sorted(l))
