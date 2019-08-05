@@ -8,3 +8,9 @@ def merge_sort (list):
 
     return merge(left, right)
 
+def split (list):
+    mid = len(list)//2
+    lef = list[:mid]
+    right = list[mid:]
+
+    return left,right
